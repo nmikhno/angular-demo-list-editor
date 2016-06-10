@@ -1,0 +1,30 @@
+<div id="add_item">
+    <form name="addItemForm">
+        Item value:
+        <div ng-show="userMessage" class="alert alert-success">
+            <span>Item successfully added </span>
+        </div>
+        <input
+                placeholder="Enter something here..."
+                type="text"
+                name="newItem"
+                ng-minlength="2"
+                ng-maxlength="250"
+                ng-model="newItem"
+                ng-required="true"/>
+
+        <div></div>
+
+        <p>
+            <button class="btn btn-danger" ng-click="save(newItem)" ng-disabled="addItemForm.$invalid">Save</button>
+            <a href="#/list"> << Go back</a>
+        </p>
+
+        <div ng-messages="addItemForm.newItem.$error" style="color:maroon" role="alert">
+            <div ng-show="addItemForm.newItem.$error.minlength" ng-message="minlength">Your field is too short</div>
+            <div ng-show="addItemForm.newItem.$error.maxlength" ng-message="maxlength">Your field is too long</div>
+        </div>
+    </form>
+
+
+</div>

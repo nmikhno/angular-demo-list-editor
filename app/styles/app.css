@@ -1,0 +1,24 @@
+/* app css stylesheet */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.content {
+  min-height: calc(100vh - 150px);
+}
+
+header{
+  margin-bottom: 30px;
+}
+
+footer{
+
+}
+
+
+
+#items_table .item_name{
+  width: 80%;
+}
+

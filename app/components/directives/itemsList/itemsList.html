@@ -1,0 +1,16 @@
+<div>
+    <table id="items_table" class="table table-bordered">
+       <tr>
+           <th>Item title</th>
+
+            <th colspan="2">Actions</th>
+
+       </tr>
+        <tr ng-repeat="item in items track by item.id">
+        <td class="item_name"> {{ item.text }}</td>
+        <td class="edit_link"><a ng-href="#/list/edit/{{ item.id }}">edit</a></td>
+        <td class="remove_link"><a href="" ng-click="deleteItem(item.id)">remove</a></td>
+    </tr>
+</table>
+
+</div>

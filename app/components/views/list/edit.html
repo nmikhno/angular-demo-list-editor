@@ -1,0 +1,9 @@
+<div>
+    <div ng-show="userMessage" class="alert alert-success">
+        <span class="alert-success">{{ userMessage }}.
+            You can go back to <a href="#/list">items list </a>
+        </span>
+    </div>
+    <input type="text" ng-model="editedItem">
+    <button ng-click="saveChanges()">Save</button>
+</div>
